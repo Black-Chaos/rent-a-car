@@ -1,8 +1,8 @@
-const { createSlice } = require('@reduxjs/toolkit');
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    brand: '',
-    price: '',
+    make: '',
+    rentalPrice: '',
     mileageFrom: 0,
     mileageTo: 0,
 };

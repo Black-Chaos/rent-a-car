@@ -1,3 +1,4 @@
+import { configureStore } from '@reduxjs/toolkit';
 import { persistStore } from 'redux-persist';
 import {
   FLUSH,
@@ -7,10 +8,8 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-
-const { configureStore } = require('@reduxjs/toolkit');
-const { filterReducer } = require('./cars/filterSlice');
-const { carsReducer } = require('./cars/carSlice');
+import { carsReducer } from './cars/carSlice';
+import { filterReducer } from './cars/filterSlice';
 
 export const store = configureStore({
     reducer: {
@@ -25,4 +24,4 @@ export const store = configureStore({
     }),
 });
 
-export const persistor = persistStore
+export const persistor = persistStore(store)
