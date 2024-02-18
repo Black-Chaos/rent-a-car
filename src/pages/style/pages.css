@@ -1,0 +1,18 @@
+.home .container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.home .btn {
+    padding: 12px 44px;
+    align-self: center;
+    border-radius: 12px;
+}
+
+.welcome-title {
+    font-size: 40px;
+}

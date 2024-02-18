@@ -4,18 +4,51 @@
 :root {
   --brand-color: #3470FF;
   --accent-color: #0B44CD;
-  --body-bg: #ffffff;
+  --text-btn: #fff;
+  --body-bg: #fff;
   --field-bg: #F7F7FB;
   --text-color: rgb(18 20 23 / .5);
   --title-color: #121417;
+  --transition: .3s ease-in-out;
 }
 
 body {
   font: 400 12px/1.5 "Manrope", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+}
+
+h1,h2,h3 {
+  color: var(--title-color);
+  font-weight: 500;
 }
 
 .container {
+  margin-inline: auto;
   max-width: 1184px;
 }
+
+.btn {
+  color: var(--text-btn);
+  font-weight: 600;
+  font-size: 14px;
+  background-color: var(--brand-color);
+  transition: background-color var(--transition);
+}
+.btn:is(:hover, :focus) {
+  background-color: var(--accent-color);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0 0 0 / .7);
+    z-index: 1200;
+  }

@@ -22,7 +22,7 @@ export class CarsAPI {
     }
 
     async getById(id) {
-        return axios(`${this.endpoint}/${id}`).then(({ data }) => data);
+      return axios(`${this.endpoint}?id=${id}`).then(({ data }) => data[0]); ///cars/:id - not working
     }
 
     currentPage() {
