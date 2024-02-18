@@ -1,0 +1,49 @@
+.filter {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 18px;
+    font-size: 18px;
+    color: var(--title-color);
+}
+
+.fieldName {
+    display: grid;
+}
+
+.field {
+    max-width: 160px;
+    padding: 12px 18px;
+    height: 48px;
+    border: none;
+    background-color: var(--field-bg);
+    border-radius: var(--element-border-radius);
+}
+
+.wrapMileage {
+    display: flex;
+}
+
+.fieldWrap {
+    position: relative;
+}
+
+.fieldText {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+}
+
+.fieldFrom {
+    padding-left: 70px;
+}
+
+.fieldTo {
+    padding-left: 48px;
+}
+
+.submitBtn {
+    height: 48px;
+}

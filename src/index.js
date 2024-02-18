@@ -9,7 +9,7 @@ import { persistor, store } from './redux/store';
 import { Loader } from 'components/Loader/Loader';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
+    // <React.StrictMode>
         <Provider store={store}>
             <PersistGate loading={<Loader/>} persistor={persistor}>
                 <BrowserRouter basename="/rent-a-car">
@@ -17,5 +17,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 </BrowserRouter>
             </PersistGate>
         </Provider>
-    </React.StrictMode>
+    // </React.StrictMode>
 );

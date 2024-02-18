@@ -39,7 +39,7 @@ const carSlice = createSlice({
   extraReducers: build =>
     build
       .addCase(fetchCars.fulfilled, (state, { payload }) => {
-        state.items.push(payload);
+        state.items.push(...payload);
         state.isLoading = false;
         state.error = null;
       })
@@ -47,6 +47,11 @@ const carSlice = createSlice({
         state.items = payload;
         state.isLoading = false;
         state.error = null;
+      })
+      .addCase(getCarsByParams.rejected, (state, { payload }) => {
+        if (payload.response.status === 404) {
+          state.items = [];
+        };
       })
       .addCase(getCarsById.fulfilled, (state, { payload }) => {
         state.selectedCar = payload;

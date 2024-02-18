@@ -6,13 +6,37 @@
 
 .carItem {
     max-width: 274px;
+    display: grid;
+    /* flex-direction: column; */
 }
 
 .thumb {
     height: 268px;
+    margin-bottom: 14px;
+    border-radius: var(--element-border-radius);
+    overflow: hidden;
 }
 
 .thumb img {
     height: 100%;
     object-fit: cover;
+}
+
+.title {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.desc {
+    margin-bottom: 28px;
+    display: grid;
+    row-gap: 4px;
+}
+
+.descItem {
+    display: flex;
+    column-gap: 6px;
+    overflow: hidden;
+    text-wrap: nowrap;
 }

@@ -10,6 +10,8 @@
   --text-color: rgb(18 20 23 / .5);
   --title-color: #121417;
   --transition: .3s ease-in-out;
+  --element-border-radius: 14px;
+  --btn-border-radius: 12px;
 }
 
 body {
@@ -19,9 +21,15 @@ body {
   color: var(--text-color);
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-weight: 500;
+}
+
+.section {
+  padding-block: 150px;
 }
 
 .container {
@@ -33,22 +41,25 @@ h1,h2,h3 {
   color: var(--text-btn);
   font-weight: 600;
   font-size: 14px;
+  padding: 12px 44px;
   background-color: var(--brand-color);
+  border-radius: var(--btn-border-radius);
   transition: background-color var(--transition);
 }
+
 .btn:is(:hover, :focus) {
   background-color: var(--accent-color);
 }
 
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0 0 0 / .7);
-    z-index: 1200;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0 0 0 / .7);
+  z-index: 1200;
+}
