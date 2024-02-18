@@ -17,7 +17,7 @@ export function CarItem({ car }) {
       address,
       functionalities,
     } = car;
-    const [_, city, country] = address?.split(', ');
+    const [, city, country] = address?.split(', ');
 
   const toggleModalOpen = () => setIsModalOpen(!isModalOpen);
     
