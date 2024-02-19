@@ -67,3 +67,7 @@ select {
         scroll-behavior: auto !important;
     }
 }
+
+svg {
+    fill: inherit;
+}

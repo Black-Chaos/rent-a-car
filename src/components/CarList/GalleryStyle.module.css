@@ -7,7 +7,22 @@
 .carItem {
     max-width: 274px;
     display: grid;
-    /* flex-direction: column; */
+    position: relative;
+}
+
+.btnFav {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    fill: transparent;
+    stroke: #fff;
+}
+
+.btnFavActive {
+    fill: var(--brand-color);
+    stroke: var(--brand-color);
 }
 
 .thumb {

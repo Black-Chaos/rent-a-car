@@ -29,7 +29,7 @@ const carSlice = createSlice({
     toggleFavorite(state, { payload }) {
       const idx = state.favoriteCarsId.indexOf(payload);
       if (idx === -1) {
-        state.favoriteItems.push(payload);
+        state.favoriteCarsId.push(payload);
       } else {
         state.favoriteItems.splice(idx, 1);
         state.favoriteCarsId.splice(idx, 1);

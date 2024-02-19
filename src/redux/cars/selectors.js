@@ -5,6 +5,9 @@ export const selectedCar = store => store.cars.selectedCar;
 export const selectIsLoading = store => store.cars.isLoading;
 export const selectError = store => store.cars.error;
 
+export const selectFavoriteCarsId = state => state.cars.favoriteCarsId;
+export const selectFavoriteCarsItem = state => state.cars.favoriteItems;
+
 export const selectFilter = store => store.filter;
 export const selectParams = createSelector(selectFilter,({make, rentalPrice})=> ({
   make,

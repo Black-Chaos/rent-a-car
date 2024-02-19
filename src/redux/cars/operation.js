@@ -47,7 +47,7 @@ export const getFavoriteCars = createAsyncThunk(
   async (ids, { rejectWithValue }) => {
     try {
       const cars = await Promise.allSettled(ids.map(id => carsAPI.getById(id)));
-      return cars;
+      return cars.map(i => i.value);
     } catch (error) {
       return rejectWithValue(error);
     }
