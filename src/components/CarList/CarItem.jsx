@@ -5,7 +5,6 @@ import css from './GalleryStyle.module.css';
 export function CarItem({ car }) {
     const [isModalOpen, setIsModalOpen] = useState(false)
     const {
-      id,
       year,
       make,
       model,
@@ -40,8 +39,8 @@ export function CarItem({ car }) {
             {functionalities[0]}
           </p>
         </div>
-            <button className={`btn ${css.btn}`} type="button" onClick={toggleModalOpen}>Learn more</button>
-            {isModalOpen && <Modal carId={id} handleCloseModal={toggleModalOpen}/>}
+            <button className={`btn`} type="button" onClick={toggleModalOpen}>Learn more</button>
+            {isModalOpen && <Modal car={car} handleCloseModal={toggleModalOpen}/>}
       </li>
     );
 }

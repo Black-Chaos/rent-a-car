@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchCars, getCarsByParams } from '../redux/cars/operation';
 import { selectError, selectFilteredCars, selectParams } from '../redux/cars/selectors';
 import { CarList } from 'components/CarList/CarList';
-import { Filter } from 'components/Navigation/Filter';
+import { Filter } from 'components/Filter/Filter';
 import { Notify } from 'notiflix';
 import './style/pages.css'
 
